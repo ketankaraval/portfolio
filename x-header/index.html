@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+    <nav class="upper-nav">
+        <div class="logo">
+            <div class="logo-img">
+            <img src="assets/logo.png" alt="" srcset="">
+            </div>
+            <div class="responsive-buttons">
+                <button id="navBar-loader"><i class="fa-solid fa-bars"></i></button>
+                <button id="navBar-cancel"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <div class="nav_right">
+            <div class="search-wrapper">
+               <div class="search-parent">
+               <div class="search-container">
+                 <input type="text" name="search" id="search_box" placeholder="Search..">
+               </div>
+               <button><i class="fa-solid fa-magnifying-glass"></i></button>
+               </div>
+            </div>
+            <div  id="login">
+                <i class="fa-solid fa-lock"></i>
+                <span>Login</span>
+            </div>
+            <div id="contact">
+                <i class="fa-solid fa-envelope"></i>
+                <span class="p_contact">Contact</span>
+            </div>
+            <div id="register">
+                <i class="fa-solid fa-user"></i>
+                <span>Register</span>
+            </div>
+            <div id="account-sect">
+                <button id="my_account">
+                 <i class="fa-solid fa-user"></i>
+                 Account 
+                 <div class="dropdown-icon">
+                 <i id="account-icon2" class="fa fa-caret-down"></i>
+                </div>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Profile</a>
+                    <a href="#">LogOut</a>
+                </div>
+            </div>         
+
+        </div>
+    </nav>
+    <nav class="lower_nav">
+        <div id="home">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </div>
+        <div id="services">
+            <button class="serv-img">
+              <i class="fa-solid fa-mug-saucer" id="service_icon"></i>
+              service 
+              <i class="fa fa-caret-down"></i>
+            </button>
+        </div>
+        <div id="projects">
+            <i class="fa-solid fa-globe" id="project_icon"></i>
+            <span>Projects</span>
+        </div>
+        <div id="clients">
+            <i class="fa-solid fa-clipboard-list" id="client_icon"></i>
+            <span>Clients</span>
+        </div>
+        <div id="about">
+            <button class="about-img">
+              <i class="fa-solid fa-user" id="about_icon"></i>
+              About 
+              <i class="fa fa-caret-down"></i>
+            </button>
+        </div>
+
+    </nav>
+    <div class="overlay">
+        <img src="assets/background-img.jpg" alt="" srcset="">
+    </div>
+    </header>
+    <main>
+    <img src="assets/background-img.jpg" alt="" srcset="">
+    </main>
+    <div id="login_page"> 
+        <button id="cancel_button" onclick="cancel()">
+            <i id="cross_mark" class="fa-solid fa-xmark"></i>
+        </button>
+        <h2>Login Form will come here </h2>
+    </div>
+    <div class="display-serv">
+    <div class="service-sect">
+        <div class="title">
+           <p>Our Area of Experties</p>
+        </div>
+        <div class="service-container">
+        <div class="first-sect">
+            <p>Ecommerce</p>
+            <a href="#">Website Development</a>
+            <a href="#">Payment Integration</a>
+            <a href="#">Shipment</a>
+            <a href="#">B2B portal Development</a>
+        </div>
+        <div class="second-sect">
+            <p>Webinar Solution 2</p>
+            <a href="#">DIY platforms for Webinars</a>
+            <a href="#">DIY platforms for online events</a>
+            <a href="#">Integaration with youtube, facebook and zoom3</a>
+        </div>
+        <div class="third-sect">
+            <p>Web Solution</p>
+            <a href="#">Web application development in PHP, Dot NET, Angular</a>
+            <a href="#">Content Management System : Wordpress, Drupal, Umbraco, Dotnetnuke</a>
+            <a href="#">CRM</a>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="about-display">
+        <div class="about-container">
+            <p>Company</p>
+            <p>Team</p>
+            <p>Carrer</p>
+        </div>
+    </div>
+    <script src="script/event.js"></script>
+    <script src="script/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Profile-page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="profile-container">
+            <section class="profile-nav-top">
+                <picture>
+                    <img src="assets/title.png" alt="" class="logo">
+                </picture>
+                <div class="profile-notif-container">
+                    <div class="notif-container">
+                        <i class="fa-light fa-bell"></i>
+                    </div>
+                    <div class="profile-info">
+                        <picture>
+                            <img src="assets/profile.svg" alt="" srcset="">
+                        </picture>
+                        <div class="name-info">
+                            <h1>Sumanto</h1>
+                            <sub>Sumanto@logitex.com</sub>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="profile-nav-data">
+                <nav class="left-nav">
+                    <div class="profile-sect nav-items">
+                        <i class="fa-sharp fa-solid fa-house"></i>
+                        <a href="#">Home</a>
+                    </div>
+                    <div class="account-sect nav-items">
+                        <i class="fa-solid fa-user"></i>
+                        <a href="#">Account settings</a>
+                    </div>
+                    <div class="tasks-sect nav-items">
+                        <i class="fa-solid fa-bars-progress"></i>
+                        <a href="#">All Tasks</a>
+                    </div>
+                    <div class="currentTask-sect nav-items">
+                        <i class="fa-solid fa-bars-progress"></i>
+                        <a href="#">Current Task</a>
+                    </div>
+                    <button>
+                        <i class="fa-sharp fa-solid fa-arrow-left-from-line"></i>
+                        <span>Log out</span>
+                    </button>
+                </nav>
+                <section class="edit-sect">
+                    <div class="img-pass-change">
+                        <div class="img-add"></div>
+                        <div class="change-btn">
+                            <button class="edit-btn">
+                                <i class="fa-solid fa-pen"></i>
+                                <span>Edit</span>
+                            </button>
+                            <button>
+                                <i class="fa-solid fa-trash"></i>
+                                <span>Delete</span>
+                            </button>
+                        </div>
+                        <div class="pass-change">
+                            <div class="pass-title">
+                                <sub>Password</sub>
+                            </div>
+                            <p>Need to reset your password?
+                            No problem, just click below to get started!
+                            </p>
+                            <button>Reset my password</button>
+                        </div>
+                        <div class="save-data">
+                           <button class="cancel-btn">Cancel</button>
+                           <button class="save-btn">Save Changes</button>
+                        </div>
+                    </div>
+                    <div class="add-info-sect">
+                          <form action="">
+                            <div class="pers-info-title">
+                                <sub>Personal information</sub>
+                            </div>
+                            <label for="fname-change">First Name</label>
+                            <input type="text" name="first-name " id="fname-change" placeholder="First Name">
+                            <label for="lname-change">Last Name</label>
+                            <input type="text" name="last-name" id="lname-change" placeholder="Last Name">
+                            <label for="email-change">Email</label>
+                            <input type="email" name="email-change" id="email-change" placeholder="Email">
+                            <label for="phone-change">Phone</label>
+                            <input type="number" name="phone-number" id="phone-change" placeholder="Phone">
+                            <div class="mail-add-title">
+                                <sub>Mailing Address</sub>
+                            </div>
+                            
+                            <label for="address-change">Address</label>
+                            <input type="text" name="address" id="address-change" placeholder="Address">
+                            <label for="address2-change">Address 2</label>
+                            <input type="text" name="address" id="address2-change" placeholder="Address 2">
+                            <div class="city-state-parent">
+                            <div class="city-parent">
+                            <label for="city-change">City</label>
+                            <input type="text" name="city" id="city-change" placeholder="City" class="input-addr">
+                            </div>
+                            <div class="state-parent">
+                            <label for="state-change">State</label>
+                            <input type="text" name="state" id="state-change" placeholder="State" class="input-addr">
+                            </div>
+                            </div>
+                            <div class="zip-country-parent">
+                            <div class="zip-parent">
+                            <label for="zip-change">Zip Code</label>
+                            <input type="text" name="zip-code" id="zip-change" placeholder="Zip Code" class="input-addr">
+                            </div>
+                            <div class="country-parent">
+                            <label for="country-change">City</label>
+                            <input type="text" name="country" id="country-change" placeholder="Country" class="input-addr">    
+                            </div>
+                            </div>
+                            
+                          </form>
+                    </div>
+                </section>
+            </section>
+        </div>
+        
+        <script src="script/main.js" async defer></script>
+    </body>
+</html>

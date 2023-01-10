@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-selector</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <div class="main-container">
+        <aside class="left-sect card">
+            <div class="left-title card-header">
+                <h2>Custom Editors</h2>
+            </div>
+            <div class="selection-sect card-body bg-default">
+            <div class="form-selector card">
+                <div class="title-elements card-header">
+                    <h3>Form elements</h3>
+                </div>
+                <div class="elements grid-container card-body">
+                    <div class="img-sect">
+                        <span id="img" draggable="true" ondragstart="drag(event)">Logo</span>
+                    </div>
+                    <div class="img-sect">
+                        <span id="input" draggable="true" ondragstart="dragText(event)">Text Box</span>
+                    </div>
+                    <!-- <div class="img-sect">
+                        <span id="dropdown" draggable="true" ondragstart="dragText(event)">Dropdown</span>
+                    </div> -->
+                    <div class="img-sect">
+                        <span id="radio-list" draggable="true" ondragstart="dragText(event)">Radio list</span>
+                    </div>
+                    <div class="img-sect">
+                        <span id="checkbox" draggable="true" ondragstart="dragText(event)">Check Box</span>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-sect card">
+                <div class="inner-theme-parent">
+                <div class="bottom-title card-header">
+                    <h3>Theme settings </h3>
+                </div>
+                <div class="theme-color card color-sect">
+                    <div class="theme-title color-sect-title card-header">
+                    <!-- <div class="inner-theme-parent card-body">
+                        <div class="theme-color card color-sect">
+                        <div class="theme-title card-header color-sect-title"> -->
+                        <h4>Theme Color </h4>
+                    </div>
+                    <div class="theme-selector color-selector">
+                        <h4> Theme Color </h4>
+                        <div class="color-parent">
+                        <span class="color-container1"></span>
+                        <span class="color-container2"></span>
+                        <span class="color-container3"></span>
+                        <span class="color-container4"></span>
+                        <input type="color" name="theme-color" id="theme-color">
+                        </div>
+                    </div>
+                </div>
+                <div class="header-color card color-sect">
+                    <div class="header-title color-sect-title card-header">
+                        <h4>Header Color </h4>
+                    </div>
+                    <div class="header-selector color-selector card-body">
+                        <h4>Header Color </h4>
+                        <div class="color-parent">
+                            <span class="color-container1"></span>
+                            <span class="color-container2"></span>
+                            <span class="color-container3"></span>
+                            <span class="color-container4"></span>
+                            <input type="color" name="header-color" id="header-color">
+                        </div>
+                        </div>
+                </div>
+                <div class="main-color color-sect card">
+                    <div class="main-title color-sect-title card-header">
+                        <h4> Main Color </h4>
+                    </div>
+                    <div class="main-selector color-selector card-body">
+                        <h4> Main Color </h4>
+                        <div class="color-parent">
+                            <span class="color-container1"></span>
+                            <span class="color-container2"></span>
+                            <span class="color-container3"></span>
+                            <span class="color-container4"></span>
+                        <input type="color" name="main-color" id="main-color">
+                    </div>
+                    </div>
+                </div>
+                <div class="footer-color color-sect card">
+                    <div class="footer-title color-sect-title card-header">
+                        <h4> Footer Color </h4>
+                    </div>
+                    <div class="footer-selector color-selector card-body">
+                        <h4> Footer Color </h4>
+                        <div class="color-parent">
+                            <span class="color-container1"></span>
+                            <span class="color-container2"></span>
+                            <span class="color-container3"></span>
+                            <span class="color-container4"></span>
+                        <input type="color" name="footer-color" id="footer-color">
+                        </div>
+                    </div>
+                </div>
+               </div>
+               </div>
+            </div>
+        </aside>
+        <div class="right-sect card">
+            <div class="top-sect">
+               <div class="save">
+                <button id="saveData" class="button bg-blue">Save</button>
+               </div>
+               <div class="publish">
+               <a href="preview.html"><button id="publishData" class="button bg-green">publish</button></a>
+               </div>
+               <div class="cancel">
+                <button id="cancelData" class="button bg-red"> Cancel</button>
+               </div>
+            </div>
+            <div class="drop-sect flex-container">
+                <div class="drop logo" id="drop-1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="drop logo" id="drop-2" ondragover="allowDrop(event)" ondrop="drop(event)"> </div>
+                <div class="drop logo" id="drop-3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+            </div>
+            <div class="middle-section">
+                <div class="main-img-selector">
+                    <p id="imgText"><span>Choose Webcast Banner image to upload</span>
+                    If no banner image is uploaded then banner image is displayed in the center</p>
+                    <input type="file" name="main-img" id="main-img">
+                    <div class="form_changer">
+                        <div class="form-title">
+                        <span>Edit Input Field</span>
+                        <button id="remove-form" onclick="removeEditBox()">
+                            <i class="fa-solid fa-x"></i>
+                        </button>
+                        </div>
+                        <form name="formInfo">
+                        <div class="first-input">
+                            <input type="checkbox" name="checkBox" id="label-checker">
+                            <label for="label-name">Label</label>
+                            <input type="text" id="label-name"  name="lblName">
+                        </div>
+                        <div class="second-input">
+                            <label for="placeholder">Placeholder</label>
+                            <input type="text" id="placeholder" name="placeHolder">
+                        </div>
+                        <div class="third-input">
+                            <label for="input-type">Input Type</label>
+                            <select name="typeInput" id="input-type">
+                                <option value="text">Text</option>
+                                <option value="password">Password</option>
+                                <option value="email">Email</option>
+                                <option value="checkbox">checkbox</option>
+                                <option value="radio">radio</option>
+                            </select>
+                        </div>
+                        <div class="fourth-input">
+                            <label for="is-input-required">Input Required </label>
+                            <select name="isRequired" id="is-input-required">
+                                <option value="true" name="trueValue">Yes</option>
+                                <option value="false" name="falseValue">No</option>
+                            </select>
+                        </div>
+                        <button id="form-submit" > Save Changes </button>
+                        <button id="cancel-form" >Cancel</button>
+                        </form>
+                        
+                    </div>
+                </div>
+                <div class="form-dropbox-container">
+                    <form name="formdata" method="dialog">
+                    <div class="form-dropbox" ondragover="allowDrop(event)" ondrop="drop(event)">
+                        <h1>Demo Dec</h1>
+                    </div>
+                    <button class="register">Register</button>
+                    </form>
+                    
+                </div>
+            </div>
+            <div class="drop-footer drop-sect flex-container">
+                <div class="drop logo" id="drop-4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="drop logo" id="drop-5" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+                <div class="drop logo" id="drop-6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script/model.js"></script>
+    <script src="script/service.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/event.js"></script>
+    
+</body>
+</html>

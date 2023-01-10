@@ -1,0 +1,926 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr 2.7fr;
+  height: 100vh;
+}
+body header {
+  display: grid;
+  grid-template-rows: 8rem 4rem;
+  background: #fff;
+}
+body header .upper-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: dashed 2px;
+}
+body header .upper-nav .logo {
+  display: flex;
+  justify-content: space-between;
+}
+body header .upper-nav .logo .logo-img img {
+  width: 13.25rem;
+}
+body header .upper-nav .logo .responsive-buttons {
+  display: none;
+}
+body header .upper-nav .logo .responsive-buttons #navBar-loader {
+  margin-top: 20%;
+  height: 6rem;
+  width: 6rem;
+  background-color: white;
+  border: none;
+  font-size: 4rem;
+  color: #3c4761;
+  display: block;
+}
+body header .upper-nav .logo .responsive-buttons #navBar-cancel {
+  margin-top: 20%;
+  height: 6rem;
+  width: 6rem;
+  background-color: white;
+  border: none;
+  font-size: 4rem;
+  color: #3c4761;
+  display: none;
+}
+body header .upper-nav .nav_right {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+}
+body header .upper-nav .nav_right .search-wrapper {
+  display: flex;
+  flex-direction: row;
+  border: 3px solid #3c4761;
+  height: 2.5rem;
+}
+body header .upper-nav .nav_right .search-wrapper .search-parent {
+  display: flex;
+  flex-direction: row;
+}
+body header .upper-nav .nav_right .search-wrapper .search-parent button {
+  height: 2rem;
+  border: none;
+  background: none;
+}
+body header .upper-nav .nav_right .search-wrapper .search-parent #search_box {
+  height: 1.9rem;
+  width: 10rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  transition: width 0.4s ease-in-out;
+}
+body header .upper-nav .nav_right .search-wrapper .search-parent #search_box:focus {
+  width: 15rem;
+}
+body header .upper-nav .nav_right #login {
+  height: 3rem;
+  font-size: 1.2rem;
+}
+body header .upper-nav .nav_right #login span {
+  display: inline-block;
+  margin-right: 2rem;
+}
+body header .upper-nav .nav_right #login i {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+body header .upper-nav .nav_right #login:hover {
+  background-color: #3c4761;
+  color: #fff;
+}
+body header .upper-nav .nav_right #contact {
+  height: 3rem;
+  font-size: 1.2rem;
+}
+body header .upper-nav .nav_right #contact .p_contact {
+  display: inline-block;
+  margin-right: 1.8rem;
+}
+body header .upper-nav .nav_right #contact i {
+  margin-top: 1rem;
+  margin-left: 1.8rem;
+}
+body header .upper-nav .nav_right #contact:hover {
+  background-color: #3c4761;
+  color: #fff;
+}
+body header .upper-nav .nav_right #register {
+  height: 3rem;
+  font-size: 1.2rem;
+}
+body header .upper-nav .nav_right #register span {
+  display: inline-block;
+  margin-right: 1.8rem;
+}
+body header .upper-nav .nav_right #register i {
+  margin-top: 1rem;
+  margin-left: 1.8rem;
+}
+body header .upper-nav .nav_right #register:hover {
+  background-color: #3c4761;
+  color: #fff;
+}
+body header .upper-nav .nav_right #account-sect {
+  padding-top: 1rem;
+  height: 3rem;
+  font-size: 1.2rem;
+}
+body header .upper-nav .nav_right #account-sect #my_account {
+  width: 8rem;
+  height: 3rem;
+  background-color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+}
+body header .upper-nav .nav_right #account-sect #my_account:hover {
+  color: #fff;
+}
+body header .upper-nav .nav_right #account-sect .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+body header .upper-nav .nav_right #account-sect .dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+body header .upper-nav .nav_right #account-sect .dropdown-content a:hover {
+  background-color: #ddd;
+}
+body header .upper-nav .nav_right #account-sect:hover {
+  background-color: #3c4761;
+  color: #fff;
+}
+body header .upper-nav .nav_right #account-sect:hover #my_account {
+  background-color: #3c4761;
+}
+body header .lower_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0.2rem;
+}
+body header .lower_nav #home {
+  height: 3rem;
+  font-size: 1.2rem;
+}
+body header .lower_nav #home span {
+  display: inline-block;
+  margin-right: 1rem;
+}
+body header .lower_nav #home i {
+  margin-top: 1.2rem;
+  margin-left: 1rem;
+}
+body header .lower_nav #home:hover {
+  background-color: #3c4761;
+  color: #fff;
+}
+body header .lower_nav #services {
+  height: 3rem;
+  font-size: 1.2rem;
+}
+body header .lower_nav #services .serv-img {
+  width: 9rem;
+  margin-top: 1rem;
+  border: none;
+  font-size: 1.2rem;
+  background-color: #fff;
+}
+body header .lower_nav #services .serv-img i {
+  margin-left: 0.5rem;
+}
+body header .lower_nav #services:hover {
+  background-color: #3c4761;
+  color: #fff;
+}
+body header .lower_nav #services:hover .serv-img {
+  background-color: #3c4761;
+  color: #ddd;
+}
+body header .lower_nav #projects {
+  height: 3rem;
+  font-size: 1.2rem;
+}
+body header .lower_nav #projects span {
+  display: inline-block;
+  margin-right: 1rem;
+}
+body header .lower_nav #projects i {
+  margin-top: 1.2rem;
+  margin-left: 1rem;
+}
+body header .lower_nav #projects:hover {
+  background-color: #3c4761;
+  color: #fff;
+}
+body header .lower_nav #clients {
+  height: 3rem;
+  font-size: 1.2rem;
+}
+body header .lower_nav #clients span {
+  display: inline-block;
+  margin-right: 1rem;
+}
+body header .lower_nav #clients i {
+  margin-top: 1.2rem;
+  margin-left: 1rem;
+}
+body header .lower_nav #clients:hover {
+  background-color: #3c4761;
+  color: #fff;
+}
+body header .lower_nav #about {
+  height: 3rem;
+  font-size: 1.2rem;
+  padding-right: 1rem;
+}
+body header .lower_nav #about .about-img {
+  margin-top: 1rem;
+  border: none;
+  font-size: 1.2rem;
+  background-color: #fff;
+}
+body header .lower_nav #about .about-img #about_icon {
+  margin-left: 1rem;
+}
+body header .lower_nav #about:hover {
+  background-color: #3c4761;
+  color: #fff;
+}
+body header .lower_nav #about:hover .about-img {
+  background-color: #3c4761;
+  color: #ddd;
+}
+body header .overlay img {
+  width: 0;
+}
+body main .hero img {
+  width: 100vw;
+}
+body main .portfolio-main {
+  background-color: #f1f1f1;
+}
+body main .portfolio-main .portfolio-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto 5rem;
+}
+body main .portfolio-main .portfolio-container .section-header {
+  margin-top: 5rem;
+  border-top: 1px solid #555555;
+}
+body main .portfolio-main .portfolio-container .section-header h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 0;
+}
+body main .portfolio-main .portfolio-container .section-header .portfolio-nav {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 0.4rem;
+}
+body main .portfolio-main .portfolio-container .section-header .portfolio-nav .nav-btns {
+  background-color: white;
+  color: black;
+  padding: 1rem 1rem;
+  border: none;
+  font-size: 1rem;
+}
+body main .portfolio-main .portfolio-container .section-header .portfolio-nav .nav-btns:hover {
+  background-color: #555555;
+  color: white;
+}
+body main .portfolio-main .portfolio-container .section-header .portfolio-nav .active-buttons {
+  background-color: #555555;
+  color: white;
+}
+body main .portfolio-main .portfolio-container .section-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+body main .portfolio-main .portfolio-container .section-body .eccomerce-sect {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  body main .portfolio-main .portfolio-container .section-body .eccomerce-sect {
+    grid-template-columns: 1fr;
+  }
+}
+body main .portfolio-main .portfolio-container .section-body .eccomerce-sect .eccomerce {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+body main .portfolio-main .portfolio-container .section-body .eccomerce-sect .eccomerce .portfolio-card_header img {
+  width: 22rem;
+}
+body main .portfolio-main .portfolio-container .section-body .eccomerce-sect .eccomerce .eccomerce_1 {
+  position: relative;
+}
+body main .portfolio-main .portfolio-container .section-body .eccomerce-sect .eccomerce .eccomerce_1 #movable_slide img {
+  -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+          clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  position: absolute;
+  left: 0;
+}
+body main .portfolio-main .portfolio-container .section-body .eccomerce-sect .eccomerce .eccomerce_1 #slider {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  width: 100%;
+  background: transparent;
+}
+body main .portfolio-main .portfolio-container .section-body .eccomerce-sect .eccomerce .eccomerce_2 .zoom-box-container {
+  position: relative;
+}
+body main .portfolio-main .portfolio-container .section-body .eccomerce-sect .eccomerce .eccomerce_2 .zoom-box-container #large-img {
+  background: url("assets/e-img-2.jpeg") no-repeat;
+  width: 5rem;
+  height: 5rem;
+  pointer-events: none;
+  position: absolute;
+  border: 4px solid black;
+  border-radius: 100%;
+  opacity: 1;
+}
+body main .portfolio-main .portfolio-container .section-body .eccomerce-sect .eccomerce .eccomerce_3 {
+  position: relative;
+  perspective: 10px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+body main .portfolio-main .portfolio-container .section-body .eccomerce-sect .eccomerce .eccomerce_3 .afterRotation {
+  position: absolute;
+  background-color: #555555;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(0deg);
+}
+body main .portfolio-main .portfolio-container .section-body .eccomerce-sect .eccomerce .eccomerce_3 .afterRotation span {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+body main .portfolio-main .portfolio-container .section-body .eccomerce-sect .eccomerce .eccomerce_3 .beforeRotation {
+  perspective: 300px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  width: 100%;
+  left: 0;
+  transform: rotateY(0deg);
+}
+body main .portfolio-main .portfolio-container .section-body .eccomerce-sect .eccomerce .eccomerce_3:hover {
+  transform: rotateY(180deg);
+}
+body main .portfolio-main .portfolio-container .section-body .eccomerce-sect .eccomerce .portfolio-card_details {
+  margin-right: 13.8rem;
+}
+body main .portfolio-main .portfolio-container .section-body .eccomerce-sect .eccomerce .portfolio-card_details span {
+  font-size: 1rem;
+  font-weight: 700;
+}
+body main .portfolio-main .portfolio-container .section-body .app-sect {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  body main .portfolio-main .portfolio-container .section-body .app-sect {
+    grid-template-columns: 1fr;
+  }
+}
+body main .portfolio-main .portfolio-container .section-body .app-sect .app {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+body main .portfolio-main .portfolio-container .section-body .app-sect .app .portfolio-card_header img {
+  width: 22rem;
+}
+body main .portfolio-main .portfolio-container .section-body .app-sect .app .app_1:hover img {
+  -webkit-animation: vibrate 0.2s;
+          animation: vibrate 0.2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes vibrate {
+  0% {
+    transform: rotate(3deg);
+  }
+  20% {
+    transform: rotate(-1deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(1deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes vibrate {
+  0% {
+    transform: rotate(3deg);
+  }
+  20% {
+    transform: rotate(-1deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(1deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+body main .portfolio-main .portfolio-container .section-body .app-sect .app .app_2 {
+  position: relative;
+}
+body main .portfolio-main .portfolio-container .section-body .app-sect .app .app_2 .change-img-sect {
+  position: absolute;
+  width: 22rem;
+  visibility: hidden;
+  z-index: 1;
+}
+body main .portfolio-main .portfolio-container .section-body .app-sect .app .app_2 .original-img-sect {
+  visibility: visible;
+}
+body main .portfolio-main .portfolio-container .section-body .app-sect .app .app_2:hover .change-img-sect {
+  visibility: visible;
+}
+body main .portfolio-main .portfolio-container .section-body .app-sect .app .app_2:hover .original-img-sect {
+  visibility: hidden;
+}
+body main .portfolio-main .portfolio-container .section-body .app-sect .app .app_3 {
+  position: relative;
+}
+body main .portfolio-main .portfolio-container .section-body .app-sect .app .app_3 .slidedown-sect {
+  width: 22rem;
+  background-color: grey;
+  height: 0;
+  transition: 0.4s ease-in;
+  overflow: hidden;
+  position: absolute;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .portfolio-main .portfolio-container .section-body .app-sect .app .app_3 .slidedown-sect span {
+  font-size: 2rem;
+  color: white;
+}
+body main .portfolio-main .portfolio-container .section-body .app-sect .app .app_3:hover .slidedown-sect {
+  height: 100%;
+}
+body main .portfolio-main .portfolio-container .section-body .app-sect .app .portfolio-card_details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 2.5rem;
+}
+body main .portfolio-main .portfolio-container .section-body .app-sect .app .portfolio-card_details sub {
+  color: #CBBDAD;
+  font-size: 1rem;
+}
+body main .portfolio-main .portfolio-container .section-body .app-sect .app .portfolio-card_details button {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: white;
+  width: 90%;
+  background-color: black;
+}
+body main .portfolio-main .portfolio-container .section-body .project-detail-sect {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  body main .portfolio-main .portfolio-container .section-body .project-detail-sect {
+    grid-template-columns: 1fr;
+  }
+}
+body main .portfolio-main .portfolio-container .section-body .project-detail-sect .project {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+body main .portfolio-main .portfolio-container .section-body .project-detail-sect .project .portfolio-card_header img {
+  width: 22rem;
+}
+body main .portfolio-main .portfolio-container .section-body .project-detail-sect .project .portfolio-card_details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+body main .portfolio-main .portfolio-container .section-body .project-detail-sect .project .portfolio-card_details sub {
+  color: #CBBDAD;
+  font-size: 1rem;
+}
+body main .portfolio-main .portfolio-container .section-body .project-detail-sect .project .portfolio-card_details button {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: white;
+  width: 22rem;
+  background-color: black;
+}
+body #login_page {
+  background-color: #3c4761;
+  opacity: 0.7;
+  height: 0;
+  width: 100vw;
+  position: absolute;
+  transition: height 1s;
+  visibility: hidden;
+  overflow: hidden;
+}
+body #login_page #cancel_button {
+  float: right;
+  height: 6rem;
+  width: 6rem;
+  background-color: #3c4761;
+  border: none;
+}
+body #login_page #cancel_button #cross_mark {
+  font-size: 3.5rem;
+  color: #ddd;
+}
+body #login_page h2 {
+  text-align: center;
+  margin-top: 20rem;
+  font-size: 3rem;
+  color: #ddd;
+  font-weight: 10;
+}
+body .display-serv {
+  display: none;
+  margin-top: 11rem;
+  position: absolute;
+}
+body .display-serv .service-sect {
+  width: 100vw;
+  height: 25rem;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+}
+body .display-serv .service-sect .title {
+  background-color: #3c4761;
+}
+body .display-serv .service-sect .title p {
+  color: #ddd;
+  font-size: 2rem;
+}
+body .display-serv .service-sect .service-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #ddd;
+}
+body .display-serv .service-sect .service-container .first-sect p {
+  color: black;
+  font-size: 1.5rem;
+}
+body .display-serv .service-sect .service-container .first-sect a {
+  color: #3c4761;
+  display: block;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+body .display-serv .service-sect .service-container .first-sect a:hover {
+  color: #ddd;
+  background-color: #3c4761;
+}
+body .display-serv .service-sect .service-container .second-sect p {
+  color: black;
+  font-size: 1.5rem;
+}
+body .display-serv .service-sect .service-container .second-sect a {
+  color: #3c4761;
+  display: block;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+body .display-serv .service-sect .service-container .second-sect a:hover {
+  color: #ddd;
+  background-color: #3c4761;
+}
+body .display-serv .service-sect .service-container .third-sect p {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+body .display-serv .service-sect .service-container .third-sect a {
+  color: #3c4761;
+  display: block;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+body .display-serv .service-sect .service-container .third-sect a:hover {
+  color: #ddd;
+  background-color: #3c4761;
+}
+body .about-display {
+  margin-top: 11rem;
+  position: absolute;
+  background-color: #3c4761;
+  display: none;
+}
+body .about-display .about-container {
+  width: 100vw;
+}
+body .about-display .about-container p {
+  display: inline-block;
+  color: #ddd;
+  font-size: 1.3rem;
+  margin-right: 2rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  html {
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 8.51px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 11px;
+  }
+  html body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0rem;
+    padding: 0rem;
+  }
+  html body header {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  html body header .upper-nav {
+    flex-direction: column;
+    border-bottom: none;
+    z-index: 1;
+    gap: 0;
+  }
+  html body header .upper-nav .logo .logo-img {
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  html body header .upper-nav .logo .responsive-buttons {
+    display: block;
+  }
+  html body header .upper-nav .nav_right {
+    flex-direction: column;
+    gap: 0rem;
+    transition: 0.4s ease-in;
+    overflow: hidden;
+    width: 0;
+    padding-top: 0rem;
+  }
+  html body header .upper-nav .nav_right .search-wrapper {
+    display: flex;
+    flex-direction: row;
+    border: 3px solid #3c4761;
+    height: 5rem;
+    background-color: #3c4761;
+    width: 100%;
+  }
+  html body header .upper-nav .nav_right .search-wrapper .search-parent {
+    width: 80%;
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+  }
+  html body header .upper-nav .nav_right .search-wrapper .search-parent button {
+    height: 3.1rem;
+    background-color: #fff;
+    outline: none;
+    width: 15%;
+  }
+  html body header .upper-nav .nav_right .search-wrapper .search-parent button i {
+    font-size: 2rem;
+  }
+  html body header .upper-nav .nav_right .search-wrapper .search-parent .search-container {
+    width: 90%;
+  }
+  html body header .upper-nav .nav_right .search-wrapper .search-parent .search-container #search_box {
+    width: 100%;
+    height: 2.9rem;
+    border: none;
+    outline: none;
+    font-size: 1.8rem;
+  }
+  html body header .upper-nav .nav_right .nav-right-content {
+    background-color: #3c4761;
+    display: block;
+    color: #fff;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    border: 1px solid white;
+  }
+  html body header .upper-nav .nav_right .nav-right-content span {
+    margin-left: 1rem;
+  }
+  html body header .upper-nav .nav_right #login {
+    font-size: 2rem;
+    border-bottom: none;
+  }
+  html body header .upper-nav .nav_right #contact {
+    font-size: 2rem;
+    border-bottom: none;
+  }
+  html body header .upper-nav .nav_right #register {
+    font-size: 2rem;
+    border-bottom: none;
+  }
+  html body header .upper-nav .nav_right #account-sect {
+    font-size: 2rem;
+  }
+  html body header .upper-nav .nav_right #account-sect #my_account {
+    color: #fff;
+    background-color: #3c4761;
+    font-size: 1.8rem;
+    margin-left: 1.35rem;
+    width: 70%;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+  html body header .upper-nav .nav_right #account-sect #my_account .fa-solid {
+    margin-right: 1rem;
+  }
+  html body header .upper-nav .nav_right #account-sect #my_account .dropdown-icon {
+    margin-left: 70%;
+  }
+  html body header .upper-nav .nav_right #account-sect .dropdown-content {
+    width: 100%;
+  }
+  html body header .upper-nav .nav_right #account-sect .dropdown-content a {
+    line-height: 3rem;
+    font-size: 1.8rem;
+  }
+  html body header .lower_nav {
+    width: 0;
+    transition: 0.4s ease-in;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    margin-bottom: 0rem;
+    background-color: #3c4761;
+  }
+  html body header .lower_nav .lower-nav-content {
+    background-color: #3c4761;
+    display: block;
+    color: #fff;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    border-bottom: 1px solid white;
+  }
+  html body header .lower_nav .lower-nav-content span {
+    margin-left: 1rem;
+  }
+  html body header .lower_nav #home {
+    font-size: 1.8rem;
+  }
+  html body header .lower_nav #services {
+    font-size: 1.8rem;
+  }
+  html body header .lower_nav #services .serv-img {
+    color: #fff;
+    background-color: #3c4761;
+    font-size: 1.8rem;
+    width: 13.5rem;
+    margin-top: 0.5rem;
+  }
+  html body header .lower_nav #services .serv-img .fa-mug-saucer {
+    margin-left: -1.1rem;
+    margin-right: 0.5rem;
+  }
+  html body header .lower_nav #services .serv-img .fa-caret-down {
+    margin-left: 0.5rem;
+  }
+  html body header .lower_nav #projects {
+    font-size: 1.8rem;
+  }
+  html body header .lower_nav #clients {
+    font-size: 1.8rem;
+  }
+  html body header .lower_nav #about {
+    font-size: 1.8rem;
+  }
+  html body header .lower_nav #about .about-img {
+    color: #fff;
+    background-color: #3c4761;
+    font-size: 1.8rem;
+    width: 11rem;
+    margin-top: 0.5rem;
+    padding-left: 0rem;
+  }
+  html body header .lower_nav #about .about-img #about_icon {
+    margin-left: 1rem;
+  }
+  html body header .lower_nav #about .about-img .fa-solid {
+    margin-left: -1.1rem;
+    margin-right: 0.5rem;
+  }
+  html body header .lower_nav #about .about-img .fa-caret-down {
+    margin-left: 0.5rem;
+  }
+  html body header .overlay {
+    width: 100vw;
+    position: absolute;
+    margin-top: 9.1rem;
+  }
+  html body header .overlay img {
+    width: 100%;
+  }
+  html body main {
+    padding-top: 30rem;
+  }
+  html body main .hero img {
+    display: none;
+    background-color: #3c4761;
+  }
+  html body .about-display {
+    margin-top: 52rem;
+    background-color: #ddd;
+    z-index: 1;
+  }
+  html body .about-display .about-container p {
+    color: #3c4761;
+  }
+  html body .display-serv {
+    z-index: 1;
+    margin-top: 40rem;
+  }
+}/*# sourceMappingURL=style.css.map */
